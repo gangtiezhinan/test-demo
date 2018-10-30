@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>login</title>
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/html5.js"></script>
+</head>
+<body>
+		<div class="container demo-1">
+			<div class="content">
+				<div id="large-header" class="large-header">
+					<canvas id="demo-canvas"></canvas>
+					<div class="logo_box">
+						<h3>欢迎登录</h3>
+						<form action="my.html" name="f" method="post" autocomplete="off">
+							<div class="input_outer">
+								<span class="u_user"></span>
+								<input id="account" class="text" style="color:#000000 !important" type="text" placeholder="请输入账户">
+							</div>
+							<div class="input_outer">
+								<span class="us_uer"></span>
+								<input id="password" class="text" style="color: #000000 !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
+							</div>
+							<div class="mb2"><a class="act-but submit" id="login" style="color: #FFFFFF">登录</a></div>
+							<button id="submit" style="display: none;" type="submit"></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/EasePack.min.js"></script>
+		<script src="js/rAF.js"></script>
+		<script src="js/demo-1.js"></script>
+	</body>
+<script type="text/javascript" src="js/jquery-3.2.1/jquery-3.2.1.js"></script>
+<script type="application/javascript">
+	$(function () {
+		$("#login").click(function () {
+		    var account = $("#account").val();
+            var password = $("#password").val();
+            if (account.length == 0 || password.length == 0){
+                alert("请填写用户名密码！！");
+			} else if (account !== 'wanfen' || password !== '123456'){
+			    alert("用户名或密码不正确！！");
+			}else {
+			  $("#submit").click();
+			}
+        })
+    })
+</script>
+</html>
